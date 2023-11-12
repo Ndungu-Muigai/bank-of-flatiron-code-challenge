@@ -101,7 +101,8 @@ function App()
   //Function to deletion of a transaction
   function deleteTransaction (id) 
   {
-    console.log(`Button id: ${id}`)
+    const remainingTransactions=transactions.filter(transaction => transaction.id !== id)
+    setTransactions(remainingTransactions)
   }
   
 

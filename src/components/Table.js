@@ -1,5 +1,6 @@
 const Tables = ({transactions}) => 
 {
+    //Mapping over the transactions object to extract individual values and saving the return value in a variabl
     const transactionData = transactions.map((transaction)=>
     {
         let {id, date, description, category, amount}=transaction
@@ -16,17 +17,16 @@ const Tables = ({transactions}) =>
         )
     })
     return (  
-        <>
-          <table>
+        <table>
             <thead>
                 <th>Date</th>
                 <th>Description</th>
                 <th>Category</th>
                 <th>Amount</th>
             </thead>
+            {/* Calling the variable that stored the result of the map to display it in the DOM */}
             {transactionData}
-          </table>
-        </>
+        </table>
     );
 }
  

@@ -2,13 +2,14 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import Table from './components/Table';
 import AddTransaction from './components/AddTransaction';
+import SearchTransactions from './components/Search';
 
 function App() 
 {
   //Creating a state to store the transactions fetched from the API and those that will be added by the user
-  const [transactions, setTransactions]=useState(null)
+  const [transactions, setTransactions]=useState([])
 
-  //Creating a state variable to store the information filled by the user
+  //Creating a state variable to store the information filled by the user in the form to add transaction
   const [formData, setFormData]=useState(
     {
       date: "",
@@ -17,6 +18,9 @@ function App()
       amount: ""
     }
   )
+
+  //Creating a state variable to store the search term
+  const [search, setSearch]=useState("")
 
   //Using useEffect hook to fetch data
   useEffect(()=>
@@ -27,7 +31,7 @@ function App()
   },[])
 
   //Checking if transactions have been fetched and storing it in a variabl. If not, display a waiting message. Else, pass in the transactions as a prop to the Table component
-  const transactionChecker= !transactions ? <div>Loading transactions</div> : <Table transactions={transactions}/>
+  const transactionChecker= !transactions ? <div>Loading transactions</div> : <Table transactions={transactions} deleteTransaction={deleteTransaction}/>
 
   //Function to handle change of form input values
   const handleChange = e =>
@@ -68,9 +72,43 @@ function App()
     )
   }
 
+  //Function to handle the search
+  const updateSearchValue= (e) =>
+  {
+    setSearch(e.target.value)
+  }
+
+  //Function to handle search form submission
+  const searchFunction = e =>
+  {
+    e.preventDefault()
+    console.log("Search button clicked")
+    console.log(search)
+
+    if(search === "")
+    {
+      setSearch("")
+      setTransactions(transactions)
+    }
+    else
+    {
+      const filteredTransactions=transactions.filter((transaction)=> transaction.description === search)
+      console.log(filteredTransactions)
+      setTransactions(filteredTransactions)
+    }
+  }
+
+  //Function to deletion of a transaction
+  function deleteTransaction (id) 
+  {
+    console.log(`Button id: ${id}`)
+  }
+  
+
   return (
     <div className="App">
       <AddTransaction formSubmit={formSubmit} onValueChange={handleChange} formData={formData}/>
+      <SearchTransactions updateSearchValue={updateSearchValue} searchFunction={searchFunction} />
       {transactionChecker}
     </div>
   );

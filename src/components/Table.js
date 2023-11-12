@@ -1,4 +1,4 @@
-const Tables = ({transactions}) => 
+const Tables = ({transactions, deleteTransaction}) => 
 {
     //Mapping over the transactions object to extract individual values and saving the return value in a variabl
     const transactionData = transactions.map((transaction)=>
@@ -11,7 +11,7 @@ const Tables = ({transactions}) =>
                 <td>{category}</td>
                 <td>{amount}</td>
                 <td>
-                    <button>Delete transaction</button>
+                    <button onClick={()=> deleteTransaction(id)}>Delete transaction</button>
                 </td>
             </tr>
         )

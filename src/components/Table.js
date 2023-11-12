@@ -1,3 +1,5 @@
+import '../css/Table.css'
+
 const Tables = ({transactions, deleteTransaction}) => 
 {
     //Mapping over the transactions object to extract individual values and saving the return value in a variabl
@@ -11,7 +13,7 @@ const Tables = ({transactions, deleteTransaction}) =>
                 <td>{category}</td>
                 <td>{amount}</td>
                 <td>
-                    <button onClick={()=> deleteTransaction(id)}>Delete transaction</button>
+                    <button type="button" onClick={()=> deleteTransaction(id)}>Delete transaction</button>
                 </td>
             </tr>
         )
@@ -19,10 +21,10 @@ const Tables = ({transactions, deleteTransaction}) =>
     return (  
         <table>
             <thead>
-                <th>Date</th>
-                <th>Description</th>
-                <th>Category</th>
-                <th>Amount</th>
+                <th scope="col">Date</th>
+                <th scope="col">Description</th>
+                <th scope="col">Category</th>
+                <th scope="col">Amount</th>
             </thead>
             {/* Calling the variable that stored the result of the map to display it in the DOM */}
             {transactionData}

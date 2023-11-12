@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# Bank of Flatiron Code Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a mini React.JS web app that uses components, props, state, events and data fetching to create a simple application that displays recent bank transactions and allows users to search for a specific transaction and add a new transaction
 
-## Available Scripts
+## Pre-requisites
 
-In the project directory, you can run:
+To successfully run the project on your local machine, the following softwares need to be installed
 
-### `npm start`
+[Node.js](https://nodejs.org/): Download and install Node.js from the official website.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[JSON Server](https://www.npmjs.com/package/json-server): Download and install JSON server from the npm official website.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Alternatively, you can install JSON Server using the command line by typing the following command in your terminal
 
-### `npm test`
+```bash
+npm i json-server
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting started
 
-### `npm run build`
+## 1. Clone the repository
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+You can do this by :
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+i. Opening the terminal and pasting the following command 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+git clone https://github.com/NdunguSam01/bank-of-flatiron-code-challenge.git
+```
 
-### `npm run eject`
+ii. Downloading the zipped file by clicking Code (the green button at the top) then Download ZIP option. Once the download is complete, open File Explorer then locate the downloaded file under Downloads. Open the folder and extract it to your desired file location
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 2. Navigate to the project directory
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Once done, navigate to where the project is and open it using your desired text editor
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 3. Installing dependencies
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Since the project's dependencies are not installed, you need to run the following command in the terminal.
 
-## Learn More
+```bash
+npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This command will install the various dependencies e.g. react-app required to successully run this project 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 4. Start the JSON server
+Since this project fetches data from a local JSON file, you will need to run the following command in order to start the mock JSON server.
 
-### Code Splitting
+```bash
+json-server --watch transactions.json --port 8000
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The reason for specifying port 8000 is because the default port number (3000) will be used to run the react application
 
-### Analyzing the Bundle Size
+## 5. Running the React.JS application
+To run the React application, type the following command in the terminal
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+npm start
+```
+Once this command runs, the page will be automatically be opened in your browser.
 
-### Making a Progressive Web App
+## 6. Expected results
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Once the page loads, you should be able to see two forms: one to add a transaction and one to search for a specific transaction, and a table that shows the transaction data being fetched.
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Author
+[Samuel Muigai](https://github.com/NdunguSam01)

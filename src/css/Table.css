@@ -11,6 +11,8 @@ table thead th
 {
     text-transform: uppercase;
     font-weight: 900;
+    font-size: 1.2em;
+    padding: 10px;
 }
 table tr:nth-child(even)
 {
@@ -26,5 +28,6 @@ table tr td button
     color: white;
     padding: 10px;
     border: none;
+    font-size: 1em;
     border-radius: 10px;
 }

@@ -6,9 +6,18 @@ form h1
 {
     text-align: center;
     text-transform: uppercase;
-    color: red;
+    font-size: 2em;
 }
-form input#date
+div.inputs
 {
-    padding: 20px;
+    margin: 8px auto;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+div.inputs input#date, input#description, select#category, input#amount, button[type=submit]
+{
+    margin: 8px auto;
+    width: 70%;
+    padding: 10px;
 }

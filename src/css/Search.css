@@ -1,0 +1,12 @@
+div.search
+{
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.search input#search, div.search button
+{
+    margin: 10px;
+    padding: 12px;
+}

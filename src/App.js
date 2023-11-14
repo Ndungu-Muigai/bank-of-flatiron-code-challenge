@@ -25,9 +25,13 @@ function App()
   //Using useEffect hook to fetch data
   useEffect(()=>
   {
-    fetch("http://localhost:8000/transactions")
+    fetch("https://raw.githubusercontent.com/NdunguSam01/bank-of-flatiron-transaction-data/main/db.json")
         .then(respone => respone.json())
-        .then(transactionData => setTransactions(transactionData))
+        .then(transactionData => 
+          {
+            let {transactions} = transactionData
+            setTransactions(transactions)
+          })
   },[])
 
   //Checking if transactions have been fetched and storing it in a variabl. If not, display a waiting message. Else, pass in the transactions as a prop to the Table component

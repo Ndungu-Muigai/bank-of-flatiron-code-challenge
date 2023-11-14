@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/bank-of-flatiron-code-challenge/static/css/main.a933d575.css",
-    "main.js": "/bank-of-flatiron-code-challenge/static/js/main.7f3405b6.js",
+    "main.js": "/bank-of-flatiron-code-challenge/static/js/main.a10afb02.js",
     "static/js/787.10e185a4.chunk.js": "/bank-of-flatiron-code-challenge/static/js/787.10e185a4.chunk.js",
     "index.html": "/bank-of-flatiron-code-challenge/index.html",
     "main.a933d575.css.map": "/bank-of-flatiron-code-challenge/static/css/main.a933d575.css.map",
-    "main.7f3405b6.js.map": "/bank-of-flatiron-code-challenge/static/js/main.7f3405b6.js.map",
+    "main.a10afb02.js.map": "/bank-of-flatiron-code-challenge/static/js/main.a10afb02.js.map",
     "787.10e185a4.chunk.js.map": "/bank-of-flatiron-code-challenge/static/js/787.10e185a4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a933d575.css",
-    "static/js/main.7f3405b6.js"
+    "static/js/main.a10afb02.js"
   ]
 }
